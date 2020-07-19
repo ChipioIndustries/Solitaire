@@ -13,7 +13,16 @@ local RoactRodux=require("RoactRodux")
 local Interface=require("Interface")
 local Rodux=require("Rodux")
 
-local store=Rodux.Store.new()
+--reducers
+local reducerModules=game.ReplicatedStorage.Modules.Reducers
+local reducers={}
+for index,module in pairs(reducerModules:GetDescendants()) do
+    if module:IsA("ModuleScript") then
+        reducers[module.Name]=require(module)
+    end
+end
+local reducer=Rodux.combineReducers(reducers)
+local store=Rodux.Store.new(reducer,{},{Rodux.loggerMiddleware})
 
 local app=Roact.createElement(RoactRodux.StoreProvider,{ --create the UI, wrapped in a roact-rodux bridge
     store=store;

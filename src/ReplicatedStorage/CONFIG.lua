@@ -4,6 +4,8 @@
 
 local CONFIG={
     CardSize=Vector2.new(100,140)
+    CardPadding=8;
+    Piles=7;
 }
 
 return CONFIG
