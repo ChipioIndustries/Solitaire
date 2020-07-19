@@ -9,13 +9,13 @@ local CONFIG=require("CONFIG")
 local CardLayout=Roact.Component:extend("CardLayout")
 
 function CardLayout:render()
-    return Roact.createElement("UIListLayout",{
-        Padding=Vector2.new(0,CONFIG.CardPadding);
-        FillDirection=Enum.FillDirection.Horizontal;
-        HorizontalAlignment=Enum.HorizontalAlignment.Center;
-        VerticalAlignment=Enum.VerticalAlignment.Top;
-        SortOrder=Enum.SortOrder.LayoutOrder;
-    })
+	return Roact.createElement("UIListLayout",{
+		Padding=UDim.new(0,CONFIG.CardPadding);
+		FillDirection=Enum.FillDirection.Horizontal;
+		HorizontalAlignment=Enum.HorizontalAlignment.Center;
+		VerticalAlignment=Enum.VerticalAlignment.Top;
+		SortOrder=Enum.SortOrder.LayoutOrder;
+	})
 end
 
 return CardLayout

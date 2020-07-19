@@ -17,19 +17,23 @@ local Rodux=require("Rodux")
 local reducerModules=game.ReplicatedStorage.Modules.Reducers
 local reducers={}
 for index,module in pairs(reducerModules:GetDescendants()) do
-    if module:IsA("ModuleScript") then
-        reducers[module.Name]=require(module)
-    end
+	if module:IsA("ModuleScript") then
+		reducers[module.Name]=require(module)
+	end
 end
 local reducer=Rodux.combineReducers(reducers)
 local store=Rodux.Store.new(reducer,{},{Rodux.loggerMiddleware})
 
 local app=Roact.createElement(RoactRodux.StoreProvider,{ --create the UI, wrapped in a roact-rodux bridge
-    store=store;
+	store=store;
 },{
-    Main=Roact.createElement(Interface);
+	Main=Roact.createElement(Interface);
 })
 
-app.mount(app,playerGui) --no need to save the handle, it's never gonna be unmounted
+Roact.setGlobalConfig({
+	elementTracing=true;
+})
+
+Roact.mount(app,playerGui) --no need to save the handle, it's never gonna be unmounted
 
 game.StarterGui:SetCoreGuiEnabled("All",false) --no need for the core gui

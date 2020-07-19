@@ -9,8 +9,8 @@ local CONFIG=require("CONFIG")
 
 local CardPile=Roact.Component:extend("CardPile")
 
-function CardPile:render()
-    
+function CardPile:render(props)
+	
 end
 
 return CardPile
