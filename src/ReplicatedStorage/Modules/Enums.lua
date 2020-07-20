@@ -1,4 +1,4 @@
---somewhat self-explanatory, should be used when props have limited choices
+---somewhat self-explanatory, should be used when props have limited choices
 --ChipioIndustries
 --last edited 7/19/2020
 

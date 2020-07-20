@@ -1,4 +1,4 @@
---primary interface component
+---primary interface component
 --ChipioIndustries
 --last edited 7/19/2020
 

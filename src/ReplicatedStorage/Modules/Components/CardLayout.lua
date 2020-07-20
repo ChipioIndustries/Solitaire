@@ -1,4 +1,4 @@
---used to lay out card piles in a row
+---used to lay out card piles in a row
 --does not accept any custom props
 --ChipioIndustries
 --last edited 7/19/2020

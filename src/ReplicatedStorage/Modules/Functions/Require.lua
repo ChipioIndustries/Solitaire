@@ -1,6 +1,6 @@
 --ChipioIndustries
 --last edit 7/19/2020
---require a module by its name as opposed to its full path.
+---require a module by its name as opposed to its full path.
 --in order for this to work properly, all modules you intend to
 --require must be uniquely named. You might run into conflicts otherwise.
 

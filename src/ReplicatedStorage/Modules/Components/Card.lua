@@ -1,4 +1,4 @@
---a card that can be clicked and whatnot
+---a card that can be clicked and whatnot
 --ChipioIndustries
 --last edited 7/19/2020
 

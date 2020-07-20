@@ -1,6 +1,6 @@
---[[
+--[[-
 	ChipioIndustries
-	last edited 7/19/2020
+	Last edited 7/19/2020
 	a simple imagelabel that shows a specified icon
 	this probably won't get finished, other things are taking priority
 

@@ -1,4 +1,4 @@
---update the rodux store to hold the latest deck contents
+---update the rodux store to hold the latest deck contents
 --ChipioIndustries
 --last edit 7/19/2020
 

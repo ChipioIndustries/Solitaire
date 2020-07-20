@@ -1,5 +1,5 @@
 --[[
-	let's get this party started!
+	Let's get this party started!
 
 	The primary job of this script is to initialize everything on the client. It requires all of the essential modules,
 	initializes the deck of cards (using OOP winkwink), combines all of the store reducers and creates the Rodux store,

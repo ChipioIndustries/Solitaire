@@ -1,4 +1,4 @@
---a simple textlabel that shows a number or character in the corner of a card
+---a simple textlabel that shows a number or character in the corner of a card
 --ChipioIndustries
 --last edited 7/19/2020
 

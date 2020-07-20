@@ -1,6 +1,6 @@
 --[[
 	ChipioIndustries
-	last edited 7/19/2020
+	Last edited 7/19/2020
 	used to create "piles" of card components
 
 	NOTABLE PROPS
