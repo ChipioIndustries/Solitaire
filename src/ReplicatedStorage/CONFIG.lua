@@ -2,33 +2,36 @@
 --ChipioIndustries
 --last edited 7/19/2020
 
+local require=require(game.ReplicatedStorage.Modules.Functions.Require)
+local Enums=require("Enums")
+
 local CONFIG={
 	CardSize=Vector2.new(100,140);
-	CardPadding=8;
+	CardPadding=8; --spacing between each card pile
 	Piles=7;
-	HighestCardValue=13;
+	HighestCardValue=13; --hmm, technically everything I've written so far would support higher-numbered cards... :thinking:
 	Suits={
-		["Hearts"]={
+		[Enums.Suit.Hearts]={
 			IconID=0;
-			Color="Red";
+			Color=Color3.new(1,0,0);
 		};
-		["Spades"]={
+		[Enums.Suit.Spades]={
 			IconID=0;
-			Color="Black";
+			Color=Color3.new(0,0,0);
 		};
-		["Diamonds"]={
+		[Enums.Suit.Diamonds]={
 			IconID=0;
-			Color="Red";
+			Color=Color3.new(1,0,0);
 		};
-		["Clubs"]={
+		[Enums.Suit.Clubs]={
 			IconID=0;
-			Color="Black";
+			Color=Color3.new(0,0,0);
 		};
 	};
-	CardValueLUT={
+	CardValueLUT={ --used to replace card numbers with other characters in the case of face cards.
 		[1]={
 			Character="A";
-			VanityID=0;
+			VanityID=0; --VanityID is the ID of the image displayed on the face of the card in place of the equivalent number of icons
 		};
 		[11]={
 			Character="J";

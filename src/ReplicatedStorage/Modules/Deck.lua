@@ -2,6 +2,20 @@
 --ChipioIndustries
 --last edited 7/19/2020
 
+--[[
+	USAGE
+
+	Deck Deck.new() - returns a new shuffled deck
+	table Deck:TakeTopCards(int amount) - returns the requested amount of cards from the top, removing them from the deck. May return less than expected or even none.
+	void Deck:AddBottomCards(table cards) - sequentially adds the list of cards to the end of the deck
+
+	CARD PROPS
+	Card {
+		int Value - the numeric value of the card
+		Enum Suit - the card's suit
+	}
+]]
+
 local require=require(game.ReplicatedStorage.Modules.Functions.Require)
 local CONFIG=require("CONFIG")
 local RNG=Random.new(tick()/10)
@@ -35,6 +49,13 @@ function Deck:TakeTopCards(amount)
 		table.remove(self.Cards,i)
 	end
 	return cards
+end
+
+function Deck:AddBottomCards(cards)
+	local ending=#self.Cards
+	for index,card in pairs(cards) do
+		self.Cards[index+ending]=card
+	end
 end
 
 return Deck

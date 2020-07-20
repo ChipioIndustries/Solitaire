@@ -27,25 +27,25 @@ function Interface:render()
 		ResetOnSpawn=false;
 		ZIndexBehavior=Enum.ZIndexBehavior.Sibling;
 	},{
-		Background=Roact.createElement("Frame",{
+		Background=Roact.createElement("Frame",{ --this is just gonna be a bunch of boring wrapper containers, nothing to see here
 			Size=UDim2.new(1,0,1,0);
 			BorderSizePixel=50;
 			BackgroundColor3=Color3.fromRGB(100,200,100);
 			BorderColor3=Color3.fromRGB(100,200,100);
 		},{
-			Completed=Roact.createElement("Frame",{
+			Completed=Roact.createElement("Frame",{ --completed card piles (starting with the aces and such, I dunno what the proper terminology is)
 				AnchorPoint=Vector2.new(0.5,0);
 				Position=UDim2.new(0.5,0,0,20);
 				BackgroundTransparency=1;
 				Size=UDim2.new(1,0,0,CONFIG.CardSize.Y);
 			},Combine({Layout=Roact.createElement(CardLayout)},completedPiles)),
-			Row=Roact.createElement("Frame",{
+			Row=Roact.createElement("Frame",{ --main row of cards where some are covered up and some aren't
 				Size=UDim2.new(1,0,0,CONFIG.CardSize.Y);
 				AnchorPoint=Vector2.new(0.5,0.5);
 				Position=UDim2.new(0.5,0,0.5,0);
 				BackgroundTransparency=1;
 			},Combine({Layout=Roact.createElement(CardLayout)},primaryPiles)), --combine the card piles with the layout before passing them all as children
-			DeckFrame=Roact.createElement("Frame",{
+			DeckFrame=Roact.createElement("Frame",{ --flip-by-three deck container
 				BackgroundTransparency=1;
 				Position=UDim2.new(0.5,0,0.75,0);
 				AnchorPoint=Vector2.new(0.5,0.5);
